@@ -130,12 +130,21 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+"""
 STATIC_ROOT = 'website/static'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATICFILES_DIRS = [STATIC_DIR,]
+"""
+0
 
+STATIC_ROOT='static'
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+  os.path.join(SITE_ROOT ,'static/'),
+]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
