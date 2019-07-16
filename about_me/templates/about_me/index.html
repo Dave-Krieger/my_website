@@ -1,0 +1,61 @@
+{% extends "about_me/base.html" %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>About Me</center></h1>
+    <h3><center>I am a 23 year old double-major graduade from University of Santa Cruz. I currently still live in Santa Cruz and am searching for a job.</center></h3>
+
+    <p></p>
+    <h5 class="text-center">Table of Contents</h5>
+
+    <div class="list-group">
+      <a href="{% url 'data_viz:data_viz_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Computer Science</h5>
+        </div>
+        <p class="mb-1">My experience within the computer science program and what I learned/accomplished</p>
+        <small class="text-muted">Education/Portfolio</small>
+      </a>
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cognitive Science</h5>
+        </div>
+        <p class="mb-1">My experience within the cognitive science program and what I learned/accomplished</p>
+        <small class="text-muted">Education/Portfolio</small>
+      </a>
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Class History</h5>
+        </div>
+        <p class="mb-1">An exahustive list of all the classes I have taken. It is sorted based on categories such as:
+          <ul>
+            <li>Computer Science - Languages/Algorithms</li>
+            <li>Human Computer Interaction</li>
+            <li>Mathematics</li>
+            <li>... etc</li>
+          </ul>
+        </p>
+        <small class="text-muted">Education</small>
+      </a>
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Hobbies</h5>
+        </div>
+        <p class="mb-1">A short page dedicated to my hobbies</p>
+        <small class="text-muted">Personality</small>
+      </a>
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Technical_Details+Scrumboard</h5>
+        </div>
+        <p class="mb-1">A brief description how the about_me webpages were developed and provides a psuedo-scrumboard for my plans</p>
+        <small class="text-muted">Personality</small>
+      </a>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+
+{% endblock %}

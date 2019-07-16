@@ -1,0 +1,36 @@
+{% extends "data_viz/base.html" %}
+{% block body_block %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/hero_img.css' %}">
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>A page dedicated to various data-wrangling scripts I wrote for my senior design project team, Visualized Climate Change</center></h1>
+    <h2>Energy Sunburst</h2>
+    <p>Probably the hardest one I worked with. It involved 3 different nested lists to navigate.</p>
+    <p>The input was a series of 10 different poorly formated XML spreadsheets</p>
+    <p>The output was a single .json which was organized by year ==> country ==> energy type : amount</p>
+    <p>Despite the dataset spanning only ~60 countries/organizations, the file still wound up being 23,000+ lines</p>
+    <p></p>
+
+    <h2>Temperature Line Graphs</h2>
+    <p>Fairly easy create. The column parsing was simple, but the wrangle did span 200+ files.</p>
+    <h2><center>All choropleth scripts</center></h2>
+    <h3>Required additional filtering based on if the country name existed in another .json which drew the world map SVG.
+        While the output format remained the same, the input format changed based on the category due to the nature of how companies store data differently.
+    </h3>
+    <ul>
+      <li>Temperature</li>
+      <li>CO2</li>
+      <li>Energy</li>
+    </ul>
+
+
+
+  </div>
+</div>
+
+<!-- /Home -->
+
+{% endblock %}

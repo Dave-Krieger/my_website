@@ -1,0 +1,26 @@
+{% extends "data_viz/base.html" %}
+{% load static %}
+
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>Welcome to the temperature page</center></h1>
+    <h3><center>#Insert temperature stuff here</center></h3>
+
+    <script src="{% static "data_viz/js/core/d3-tip.js" %}" type="text/javascript"></script>
+
+    <div id="slider"></div>
+    <div id="choroInputBox"></div>
+
+    <script src="{% static "data_viz/js/temperature/tempChoroInit.js" %}" type="text/javascript">     </script>
+    <script src="{% static "data_viz/js/temperature/tempChoroSlider.js" %}" type="text/javascript">   </script>
+    <script src="{% static "data_viz/js/temperature/tempChoroButtons.js" %}" type="text/javascript">  </script>
+    <script src="{% static "data_viz/js/temperature/tempChoro.js" %}" type="text/javascript">         </script>
+    <script src="{% static "data_viz/js/temperature/tempChoroHelper.js" %}" type="text/javascript">   </script>
+
+  </div>
+</div>
+
+
+{% endblock %}

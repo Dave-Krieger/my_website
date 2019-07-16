@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dave-Krieger</title>
+
+    <!-- Google font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/style.css" %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/co2ScatterPlot.css" %}">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  </head>
+  <body>
+      <!-- Navbar content -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'index' %}">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization Home</a>
+            <a class="nav-item nav-link text-white" href="{% url 'data_viz:temperature' %}">Temperature</a>
+            <a class="nav-item nav-link text-white" href="{% url 'data_viz:co2' %}">Carbon Dioxide</a>
+            <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_wrangle' %}">Data Wrangling</a>
+            <a class="nav-item nav-link text-white" href="https://climate-visuals.herokuapp.com/" target="_blank">Senior Design Link</a>
+
+          </div>
+        </div>
+      </nav>
+
+    <div class="">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
