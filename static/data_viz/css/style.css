@@ -104,7 +104,7 @@ blockquote:before{
 	width:40px;
 	height:40px;
 	line-height:40px;
-	text-align:left;
+	text-align:center;
 	border-radius:50%;
 	border:1px solid #EBEBEB;
 }
@@ -134,7 +134,7 @@ blockquote:before{
 	right:0;
 	top:0;
 	bottom:0;
-	background-position:left;
+	background-position:center;
 	background-size:cover;
 }
 
@@ -183,7 +183,7 @@ blockquote:before{
 	position:absolute;
 	width: 30px;
 	right: 15px;
-	text-align:left;
+	text-align:center;
 	opacity:0;
 	-webkit-transition:0.2s all;
 	transition:0.2s all;
@@ -460,7 +460,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width:80px;
 	height:80px;
 	line-height:80px;
-	text-align:left;
+	text-align:center;
 	border-radius: 50%;
 	font-size:30px;
 	border:1px solid #EBEBEB;
@@ -502,7 +502,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width: 80px;
 	height: 80px;
 	line-height: 80px;
-	text-align: left;
+	text-align: center;
 	background: #fff;
 	border-radius: 50%;
 	font-size: 24.027px;
@@ -597,7 +597,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width:40px;
 	height:40px;
 	line-height:40px;
-	text-align:left;
+	text-align:center;
 	border:2px solid #fff;
 	color:#fff;
 	border-radius:50%;
@@ -638,7 +638,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 #courses .center-btn {
-	text-align:left;
+	text-align:center;
 	margin-top:40px;
 }
 
@@ -727,7 +727,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width:40px;
 	height:40px;
 	line-height:40px;
-	text-align:left;
+	text-align:center;
 	border-radius:50%;
 	color:#FFF;
 	background-color:#EBEBEB;
@@ -790,7 +790,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
-	text-align: left;
+	text-align: center;
 }
 
 /*------------------------------------*\
@@ -850,7 +850,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 /* -- Pagination -- */
 .post-pagination {
 	margin-top:40px;
-	text-align:left;
+	text-align:center;
 }
 
 .post-pagination .pages {
@@ -869,7 +869,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
-	text-align: left;
+	text-align: center;
 	border-radius: 50%;
 	background-color: #EBEBEB;
 	-webkit-transition: 0.2s all;
@@ -893,7 +893,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .pagination-back , .pagination-next {
 	display: block;
-	text-align: left;
+	text-align: center;
 	border-radius: 40px;
 	background-color: #EBEBEB;
 	-webkit-transition: 0.2s all;
@@ -1084,7 +1084,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	width:40px;
 	height:40px;
 	line-height:40px;
-	text-align:left;
+	text-align:center;
 	color:#FFF;
 	background-color:#EBEBEB;
 	border-radius:50%;
@@ -1200,30 +1200,30 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 	/*-- Call to action --*/
 	#cta {
-		text-align:left;
+		text-align:center;
 	}
 
 	/*-- Footer --*/
 	.footer-logo {
-		text-align:left;
+		text-align:center;
 	}
 
 	.footer-nav {
-		text-align:left;
+		text-align:center;
 	}
 	.footer-nav li {
 		margin-top: 10px;
 	}
 
 	.footer-social {
-		text-align:left;
+		text-align:center;
 	}
 	.footer-social li {
 		margin-top: 10px;
 	}
 
 	.footer-copyright {
-		text-align:left;
+		text-align:center;
 		line-height:inherit;
 		margin-top:20px;
 	}
@@ -1354,7 +1354,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 body {
   background-color: var(--secondary-color-tint-2);
-  text-align: left;
+  text-align: center;
   margin: 0px;
 }
 
@@ -1578,15 +1578,15 @@ text {
 #contactLogo {
     max-width: 30%;
   }
-
+  
   #header {
     background-color: #3B444C;
   }
-
+  
   a {
     color: lightgrey;
   }
-
+  
   a:hover {
     color: white;
   }

@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('data_viz/',include('data_viz.urls')),
     path('main_page/',include('main_page.urls')),
+    path('education/',include('education.urls')),
     path('about_me/',include('about_me.urls')),
 
 ]

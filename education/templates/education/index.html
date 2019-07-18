@@ -1,0 +1,58 @@
+{% extends "education/base.html" %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>Education</center></h1>
+    <h3><center>I spent five years pursing a double degree between computer science and cognitive science. The journey originated with me as an undeclared computer engineer and blossomed into what it is now.</center></h3>
+
+    <p></p>
+    <h5 class="text-center">Table of Contents</h5>
+
+    <div class="list-group">
+
+      <a href="{% url 'education:comp_sci' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Computer Science</h5>
+        </div>
+        <p class="mb-1">My experience within the computer science program and what I learned/accomplished</p>
+        <small class="text-muted">Education/Portfolio</small>
+      </a>
+
+      <a href="{% url 'education:cog_sci' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cognitive Science</h5>
+        </div>
+        <p class="mb-1">My experience within the cognitive science program and what I learned/accomplished</p>
+        <small class="text-muted">Education/Portfolio</small>
+      </a>
+
+      <a href="{% url 'education:class_history' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Class History</h5>
+        </div>
+        <p class="mb-1">An exahustive list of all the classes I have taken. It is sorted based on categories such as:
+          <ul>
+            <li>Computer Science - Languages/Algorithms</li>
+            <li>Human Computer Interaction</li>
+            <li>Mathematics</li>
+            <li>... etc</li>
+          </ul>
+        </p>
+        <small class="text-muted">Education</small>
+      </a>
+
+      <a href="{% url 'education:tech_dets' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Technical_Details+Scrumboard</h5>
+        </div>
+        <p class="mb-1">A brief description how the about_me webpages were developed and provides a psuedo-scrumboard for my plans</p>
+        <small class="text-muted">Personality</small>
+      </a>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+
+{% endblock %}

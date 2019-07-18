@@ -39,7 +39,7 @@
 <div class="container">
   <div class="jumbotron">'
     <h1><center>Welcome to my main home page!</center></h1>
-    <h3><center>Each webpage tab expands to a a new seires of availible webpages. Below is a table of contents about what each webtab entails</center></h3>
+    <h3><center>Each webpage tab expands to a a new seires of availible webpages. Below is a table of contents about what each sub-series of webpages entails</center></h3>
     <p></p>
     <h5 class="text-center">Table of Contents</h5>
 
@@ -48,16 +48,46 @@
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Data Visualization</h5>
         </div>
-        <p class="mb-1">Showcases climate change data visualizations which were developed using D3. Includes a section about how python data wrangling as well as videos where I analyze the story told by the visualization.</p>
-        <small>Portfolio</small>
+        <p class="mb-1">Showcases climate change data visualizations I created for my senior design project at UCSC. It contains the following:</p>
+        <ul>
+          <li>Interactive data visualizations</li>
+          <li>Videos where I discuss the stories told by visualizations</li>
+          <li>Step-by-step explanation of one of the data wrangling scripts I wrote</li>
+        </ul>
+        <small>Portfolio, Communication Skills</small>
       </a>
+
+      <a href="{% url 'education:education_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Education</h5>
+        </div>
+        <p class="mb-1">Learn about my education at UCSC as well as the experiences I had within each major.</p>
+        <ul>
+          <li>Computer Science</li>
+          <li>Cognitive Science</li>
+          <li>Class History</li>
+        </ul>
+        <small class="text-muted">Education</small>
+      </a>
+
       <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">About Me</h5>
         </div>
-        <p class="mb-1">Learn about my education background as well as my hobbies.</p>
-        <small class="text-muted"></small>
+        <p class="mb-1">Learn who I am as well as some various skills</p>
+        <ul>
+          <li>Hobbies</li>
+          <li>Programming Habits & Preferences</li>
+          <li>Non-technical skills</li>
+          <ul>
+            <li>Life long leader</li>
+            <li>Fast typist (85+ WPM)</li>
+            <li>Clear communicator</li>
+          </ul>
+        </ul>
+        <small class="text-muted">Personal</small>
       </a>
+
     </div>
     <p></p>
 

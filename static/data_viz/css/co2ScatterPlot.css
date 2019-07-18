@@ -35,7 +35,7 @@ h3 {
   padding: 8px;
   background-color: rgba(44, 53, 49, 0.8);
   border-radius: 3px;
-  text-align: left;
+  text-align: center;
   width: 350px;
   font-family: 'avenir next', sans-serif;
   line-height: 25px;
@@ -67,7 +67,7 @@ h3 {
   height: 700px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: left;
+  background-position: center;
   padding-top: 180px;
   background-size: cover;
 }
@@ -79,7 +79,7 @@ h3 {
 }
 
 .imageText {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   background-color: rgba(17, 17, 17, 0.5);
   border-radius: 5px;
