@@ -12,5 +12,5 @@ def co2(request):
 def data_wrangle(request):
     return render(request, 'data_viz/data_wrangle.html')
 
-def about_me(request):
-    return render(request, 'data_viz/about_me.html')
+def tech_dets(request):
+    return render(request, 'data_viz/tech_dets.html')

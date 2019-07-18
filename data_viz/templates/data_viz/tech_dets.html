@@ -1,0 +1,51 @@
+{% extends "data_viz/base.html" %}
+{% block body_block %}
+
+{% load static %}
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Custom stlylesheet -->
+<link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
+
+<div class="container">
+  <div class="jumbotron">'
+    <h4>These series of webpages run on the Django frameworks using <strong><i>functional based views</i></strong>. It is designed as its own app, 'about_me'. Below you can find my psuedo-scrum board</h4>
+
+      <p>Not Started</p>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Add photos to landing page + hobbies</li>
+        <li><i class="fa-li fa fa-times"></i>Add text to computer science & cognitive science webpages</li>
+        <li><i class="fa-li fa fa-times"></i>Align all columns in class history</li>
+
+      </ul>
+
+      <p>In Progress</p>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-spinner fa-spin"></i>Nothing ongoing on the about_me webpages: </li>
+      </ul>
+
+      <p></p>
+      <p></p>
+      <h5>Future development goals - "Reach"</h5>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Make each webpage more aesthetically pleasing. Overhaul with alot more css using bootsrap/fontawesome/etc</li>
+        <li><i class="fa-li fa fa-times"></i>Convert my 'class history' webpage from raw HTML to a <strong><i></i>class based view/mdoel.</strong></li>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-times"></i>Create MVC's for course & category</li>
+          <li><i class="fa-li fa fa-times"></i>Save course history & associated categories to database</li>
+          <li><i class="fa-li fa fa-times"></i>Convert raw HTML to use new class based models</li>
+          <li><i class="fa-li fa fa-times"></i>Create user selection methods to filter/view information as they desire</li>
+          <li><i class="fa-li fa fa-times"></i>Attatch href URLS to each class taken for more information</li>
+        </ul>
+
+      </ul>
+
+</div>
+</div>
+
+
+<!-- /Home -->
+
+{% endblock %}

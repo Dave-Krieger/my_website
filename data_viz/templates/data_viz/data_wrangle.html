@@ -2,35 +2,136 @@
 {% block body_block %}
 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/hero_img.css' %}">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Custom stlylesheet -->
+<link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
 
 <div class="container">
-  <div class="jumbotron">'
-    <h1><center>A page dedicated to various data-wrangling scripts I wrote for my senior design project team, Visualized Climate Change</center></h1>
-    <h2>Energy Sunburst</h2>
-    <p>Probably the hardest one I worked with. It involved 3 different nested lists to navigate.</p>
-    <p>The input was a series of 10 different poorly formated XML spreadsheets</p>
-    <p>The output was a single .json which was organized by year ==> country ==> energy type : amount</p>
-    <p>Despite the dataset spanning only ~60 countries/organizations, the file still wound up being 23,000+ lines</p>
+  <div class="jumbotron">
+    <h3><center>A page dedicated to various data-wrangling scripts I wrote for my senior design project team, Visualized Climate Change</center></h3>
+    <p>I wrote a handful of these for the team. However, I am only going to deep dive two of the wrangling scripts. Enjoy!</p>
+</div>
+
+
+<div class="container">
+  <div class="jumbotron ">
+    <h1 class="text-center">Energy Sunburst I/O</h1>
+    <!-- <p>This dataset was probably the hardest one I worked with. The raw input datafiles were 'dirty' tsv's split into twelve different categories. The output was a single .json file sorted by year -> country -> category : amount. It involved nested lists, string compares, and typecasting</p> -->
+
+    <h3>Input</h3>
+    <p>Twelve 'dirty' TSV files sorted by energy category. Two of which are very important, total energy consumption & total energy production, because they are used later to calculate net energy.</p>
+    <img class="img-fluid" src="{% static 'data_viz/img/dir.png' %} " alt=""> </img>
+
+    <p></p>
+    <p>Each file was a 'dirty' tsv because they contained weird characters and unneccessary strings at the top of each file. I removed these issues with a small script not shown.</p>
+
+    <img class="img-fluid" src="{% static 'data_viz/img/Input.png' %} " alt=""> </img>
+    <p></p>
     <p></p>
 
-    <h2>Temperature Line Graphs</h2>
-    <p>Fairly easy create. The column parsing was simple, but the wrangle did span 200+ files.</p>
-    <h2><center>All choropleth scripts</center></h2>
-    <h3>Required additional filtering based on if the country name existed in another .json which drew the world map SVG.
-        While the output format remained the same, the input format changed based on the category due to the nature of how companies store data differently.
-    </h3>
-    <ul>
-      <li>Temperature</li>
-      <li>CO2</li>
-      <li>Energy</li>
-    </ul>
+    <h3>Output</h3>
+    <p>A single .json file sorted by year -> country -> category : amount.</p>
+    <img class="img-fluid" src="{% static 'data_viz/img/Output.png' %} " alt=""> </img>
 
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron ">
+    <h1 class="text-center">Energy Sunburst Wrangle Code</h1>
+    <!-- <p>This dataset was probably the hardest one I worked with. The raw input datafiles were 'dirty' tsv's split into twelve different categories. The output was a single .json file sorted by year -> country -> category : amount. It involved nested lists, string compares, and typecasting</p> -->
+
+    <h3 class="">Start</h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <img class="img-fluid" src="{% static 'data_viz/img/start.png' %} " alt="">
+      </div>
+
+      <div class="col-sm-6"><p>Psuedo init and start section. I was in a HUGE rush to help this person out so I made use of a global var just so I didn't have to keep passing it.</p>
+        <p>The getyears() func just generates a list of all the years: 1990-2018</p>
+        <p>For each file within the system, read the file's data and store that the entire dictionary as list element in allList.</p>
+        <p>Generate output file based on the data... we'll go more indepth in a second.</p>
+      </div>
+
+    </div>
+    <p></p>
+    <h3 class="">readFiles()</h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <img class="img-fluid" src="{% static 'data_viz/img/first_func.png' %} " alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <p>Navigate to directory and create file name strings</p>
+        <p>split each line based on their delimiter: tab or '\t'</p>
+        <p>The first token is the country string. If this country has never been read before, create a new country by passing it as a new element to the global list: countryList</p>
+        <p>Check bounds based on year span. If safe, then add each year's value to a temp list.</p>
+        <p>Once completed, store the templist as a nested list within another temporary list called: thisFileList. </p>
+        <p>Return the packaged list (really just an array...) which is saved to the 'allList'</p>
+        <p>Keep iterating through each file adding all the data as a nested list to 'allList'</p>
+        <p></p>
+      </div>
+
+    </div>
+
+    <p></p>
+    <h3 class="">writeToFile</h3>
+    <div class="row">
+      <div class="col-sm-6">
+        <img class="img-fluid" src="{% static 'data_viz/img/write_1.png' %} " alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <p>A few different obj's being passed: outFileString is the name of the output file, yearList is an array/list from 1990-2018. countryList is a list of every country that was read from the input files. allList is a list containing a nested lists representing each file that was read.</p>
+        <p>Create the output file along with the first header information.</p>
+        <p>Our data is first organized by year. Hence we iterate through the years as saved in yearList</p>
+        <p>Time for some nested loops based on the nested list data, all iterating and indexing based on year! This is why using an array was nice. Instead of having to bind data to each year, I carefully saved each datapoint into the correct index which why we iterate from range(1,29).</p>
+        <p>for every country that was read, go through the allList searching for two specfic datasets: energy production & consumption. Once found, find the net sum and save that as totalVal</p>
+      </div>
+
+    </div>
+
+    <p></p>
+    <div class="row">
+      <div class="col-sm-6">
+        <img class="img-fluid" src="{% static 'data_viz/img/write_2.png' %} " alt="">
+      </div>
+
+      <div class="col-sm-6">
+        <p>Now write the data to the file in a .json format</p>
+        <p>Write the country name and associated net energy amount. Create a newline and indent it. keep this indentation size while iterating through each file's data which is saved in allList.</p>
+        <p>Write the corresponding energy type name and the associated data amount.</p>
+        <p>After each file is read and the correct data is written, check to see if we have written data for every country for THIS YEAR ONLY. If not last country, add a ',' if it is the last, don't add a ','</p>
+        <p>Some more formatting stuff checking the year and seeing if we need to add a ',' or not</p>
+      </div>
+
+    </div>
+
+    <p></p>
+    <h3 class="">Finished Product</h3>
+    <p>So 19,000 lines later we reach the nested data section of energy consumption for 2018. Having nested data like this exponentially increases the file size compared to its original smaller .tsv form. However, certain applications may require a .json form such as this one. It's helpful because it enables other api's/parsers to easily interpret the data as a key:value pair.</p>
+      <img class="img-fluid" src="{% static 'data_viz/img/Output.png' %} " alt="">
 
 
   </div>
 </div>
 
-<!-- /Home -->
 
+
+<!-- /Home -->
+<div class="container">
+  <div class="jumbotron">
+    <p></p>
+    <h1>Final Words</h1>
+    <p>This dataset was probably the hardest one I worked with. The requirements of tracking all the data, storing it, and iterating over it was not a trivial task (for me at least...). If you want to explore more of my parsing code, feel free to explore here: <a href="https://github.com/Dave-Krieger/Krieger-Dave-Portfolio/tree/master/visualizing-climate-change/dataSets" target="_blank">LINK</a></p>
+
+    <!-- include url link -->
+
+    <p>Since I am using choropleths on this website it doesn't hurt to talk about the data and its format. However, this webpage is already too long! Visit the <a href="{% url 'data_viz:tech_dets' %}"> technical_details/Scrumboard</a> page to checkup on how I produced the visualizations.</p>
+
+  </div>
+</div>
 {% endblock %}

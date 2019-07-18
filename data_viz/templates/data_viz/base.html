@@ -19,9 +19,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
-    <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/style.css" %}"/>
 
     <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/co2ScatterPlot.css" %}">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/style.css" %}"/>
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/queue.v1.min.js"></script>
@@ -35,18 +43,20 @@
   <body>
       <!-- Navbar content -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'index' %}">Portfolio</a>
+
+        <a class="navbar-brand" href="{% url 'index' %}">Main_Page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization Home</a>
             <a class="nav-item nav-link text-white" href="{% url 'data_viz:temperature' %}">Temperature</a>
             <a class="nav-item nav-link text-white" href="{% url 'data_viz:co2' %}">Carbon Dioxide</a>
             <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_wrangle' %}">Data Wrangling</a>
+            <a class="nav-item nav-link text-white" href="{% url 'data_viz:tech_dets' %}">Technical_Details+Scrumboard</a>
             <a class="nav-item nav-link text-white" href="https://climate-visuals.herokuapp.com/" target="_blank">Senior Design Link</a>
-
           </div>
         </div>
       </nav>
