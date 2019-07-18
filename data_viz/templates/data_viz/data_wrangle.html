@@ -50,10 +50,10 @@
         <img class="img-fluid" src="{% static 'data_viz/img/start.png' %} " alt="">
       </div>
 
-      <div class="col-sm-6"><p>Psuedo init and start section. I was in a HUGE rush to help this person out so I made use of a global var just so I didn't have to keep passing it.</p>
-        <p>The getyears() func just generates a list of all the years: 1990-2018</p>
+      <div class="col-sm-6"><p>Init and start section. I was in a HUGE rush to help this person out by making this script. I made use of a global var so I didn't have to keep passing it.</p>
+        <p>The getyears() func generates a list of all the years: 1990-2018</p>
         <p>For each file within the system, read the file's data and store that the entire dictionary as list element in allList.</p>
-        <p>Generate output file based on the data... we'll go more indepth in a second.</p>
+        <p>Generate .json output file based on the data... we'll go more indepth in a bit.</p>
       </div>
 
     </div>
@@ -112,7 +112,7 @@
 
     <p></p>
     <h3 class="">Finished Product</h3>
-    <p>So 19,000 lines later we reach the nested data section of energy consumption for 2018. Having nested data like this exponentially increases the file size compared to its original smaller .tsv form. However, certain applications may require a .json form such as this one. It's helpful because it enables other api's/parsers to easily interpret the data as a key:value pair.</p>
+    <p>So 19,000 lines later we reach the nested data section of energy consumption for 2018. Having nested data like this exponentially increases the file size compared to its original smaller .tsv form. However, certain applications may require a .json form such as this one. It's helpful because it enables other api's/parsers to easily interpret the data as a key:value pair as well as parent & child node relationships.</p>
       <img class="img-fluid" src="{% static 'data_viz/img/Output.png' %} " alt="">
 
 
