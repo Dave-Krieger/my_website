@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
-    <link rel="stylesheet" type="text/css" href="{% static "data_viz/css/style.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
 
   </head>
   <body>
@@ -29,10 +29,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link text-white" href="{% url 'about_me:about_me_index' %}">About Me Home</a>
-            <a class="nav-item nav-link text-white" href="{% url 'about_me:comp_sci' %}">Computer Science</a>
-            <a class="nav-item nav-link text-white" href="{% url 'about_me:cog_sci' %}">Cognitive Science</a>
-            <a class="nav-item nav-link text-white" href="{% url 'about_me:class_history' %}">Class History</a>
             <a class="nav-item nav-link text-white" href="{% url 'about_me:hobbies' %}">Hobbies</a>
+            <a class="nav-item nav-link text-grey disabled" href="{% url 'about_me:programming' %}">Programming</a>
+            <a class="nav-item nav-link text-grey disabled" href="{% url 'about_me:leader' %}">Leader</a>
             <a class="nav-item nav-link text-white" href="{% url 'about_me:tech_dets' %}">Technical_Details+Scrumboard</a>
 
           </div>
