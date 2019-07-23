@@ -14,3 +14,6 @@ def data_wrangle(request):
 
 def tech_dets(request):
     return render(request, 'data_viz/tech_dets.html')
+
+def sdp(request):
+    return render(request, 'data_viz/senior-design.html')

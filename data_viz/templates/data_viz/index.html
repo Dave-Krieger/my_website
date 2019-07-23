@@ -10,8 +10,53 @@
 
 <div class="container">
   <div class="jumbotron">'
-    <h1><center>Welcome to my data visualization series of webpages</center></h1>
-    <h3><center>I want to do more stuff here</center></h3>
+    <h1><center>Data Visualizations Home </center></h1>
+    <h3><center>A portfolio of the work I accomplished for my computer science senior design project</center></h3>
+    <p></p>
+    <h5 class="text-center">Table of Contents</h5>
+
+    <div class="list-group">
+      <a href="{% url 'data_viz:data_viz_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Senior Design</h5>
+        </div>
+        <p class="mb-1">Explains everything about my senior design project and what I took away from it.</p>
+        <small class="text-muted">Education/Portfolio</small>
+      </a>
+
+      <a href="{% url 'data_viz:temperature' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Temperature</h5>
+        </div>
+        <p class="mb-1">Interactive temperature choropleth and supplemental video</p>
+        <small class="text-muted">Portfolio/Communication</small>
+      </a>
+
+      <a href="{% url 'data_viz:co2' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Carbon Dioxide</h5>
+        </div>
+        <p class="mb-1">Interactive carbon dioxide choropleth and supplemental video"</p>
+        <small class="text-muted">Portfolio/Communication</small>
+      </a>
+
+      <a href="{% url 'data_viz:data_wrangle' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Data Wrangling </h5>
+        </div>
+        <p class="mb-1">A step-by-step breakdown of one of the python wrangling scripts I wrote for my team.</p>
+        <small class="text-muted">Portfolio</small>
+      </a>
+
+      <a href="{% url 'data_viz:tech_dets' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Technical_Details & Scrumboard</h5>
+        </div>
+        <p class="mb-1">A brief description how the data_viz webpages were developed and provides a psuedo-scrumboard</p>
+        <small class="text-muted">Technical</small>
+      </a>
+    </div>
+
   </div>
 </div>
 

@@ -1,0 +1,51 @@
+{% extends "data_viz/base.html" %}
+{% block body_block %}
+
+{% load static %}
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Custom stlylesheet -->
+<link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
+
+<div class="container">
+  <div class="jumbotron">'
+    <h3 class="text-center">Technical_Details</h3>
+    <p>These series of webpages run on the Django frameworks using <strong><i>functional based views</i></strong>. It is designed as its own app, 'data_viz'.</p>
+
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+    <h3 class="text-center"> SCRUMBOARD </h3>
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+    
+      <h5>Not Started</h5>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Complete landing page text</li>
+        <li><i class="fa-li fa fa-times"></i>Add videos & text to choropleth sections</li>
+        <li><i class="fa-li fa fa-times"></i>Add energy choropleth to website</li>
+        <li><i class="fa-li fa fa-times"></i> Fix CSS for this series of webpages</li>
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-times"></i>This was caused by the fact I imported the old CSS from my senior design class so the visuals would render correctly.</li>
+        </ul>
+      </ul>
+
+      <p></p>
+      <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+      <h5>In Progress</h5>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-spinner fa-spin"></i>Revise text on the data wrangling webapge</li>
+      </ul>
+
+      <p></p>
+      <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+      <h5>Future development goals - "reach"</h5>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Create webpage dedicated to a breakdown of how I wrote the choropleth visualization</li>
+      </ul>
+</div>
+</div>
+
+
+<!-- /Home -->
+
+{% endblock %}

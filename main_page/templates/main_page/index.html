@@ -44,17 +44,18 @@
     <h5 class="text-center">Table of Contents</h5>
 
     <div class="list-group">
-      <a href="{% url 'data_viz:data_viz_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Data Visualization</h5>
+          <h5 class="mb-1">About Me</h5>
         </div>
-        <p class="mb-1">Showcases climate change data visualizations I created for my senior design project at UCSC. It features:</p>
+        <p class="mb-1">Learn who I am as well as some various skills</p>
         <ul>
-          <li>Interactive data visualizations</li>
-          <li>Videos where I discuss the stories told by visualizations</li>
-          <li>Step-by-step explanation of one of the data wrangling scripts I wrote</li>
+          <li>Hobbies</li>
+          <li>Programming Habits & Preferences</li>
+          <li>Leadership</li>
         </ul>
-        <small>Portfolio, Communication Skills</small>
+        <small class="text-muted">Personal</small>
       </a>
 
       <a href="{% url 'education:education_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -70,18 +71,30 @@
         <small class="text-muted">Education</small>
       </a>
 
-      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+      <a href="{% url 'data_viz:data_viz_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">About Me</h5>
+          <h5 class="mb-1">Portfolio - Data Visualization</h5>
         </div>
-        <p class="mb-1">Learn who I am as well as some various skills</p>
+        <p class="mb-1">Showcases climate change data visualizations I created for my senior design project at UCSC. It features:</p>
         <ul>
-          <li>Hobbies</li>
-          <li>Programming Habits & Preferences</li>
-          <li>Leadership</li>
-
+          <li>Interactive data visualizations</li>
+          <li>Videos where I discuss the stories told by visualizations</li>
+          <li>Step-by-step explanation of one of the data wrangling scripts I wrote</li>
         </ul>
-        <small class="text-muted">Personal</small>
+        <small>Portfolio, Communication Skills</small>
+      </a>
+
+      <a href="https://github.com/Dave-Krieger/Krieger-Dave-Portfolio" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Github Portfolio</h5>
+        </div>
+        <p class="mb-1">Features three different portfolio items on my github</p>
+        <ul>
+          <li>Data Visualization (also availible on this website!)</li>
+          <li>Micro-controller: Loop it in xilinx</li>
+          <li>Low level C:  HTTP-FTP server w/ client signup, passwords, and network security.</li>
+        </ul>
+        <small>Portfolio, Communication Skills</small>
       </a>
 
     </div>
