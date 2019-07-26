@@ -1,0 +1,39 @@
+{% extends 'psql_db/basic_app_base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Welcome to the school details page.</h1>
+  <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+
+  <p></p>
+  <h3>School details:</h3>
+  <p>Name: {{school_detail.name}}</p>
+  <p>Principal: {{school_detail.principal}}</p>
+  <p>Location: {{school_detail.location}}</p>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <p><a class='btn btn-warning mr-5' href="{% url 'psql_db:update' pk=school_detail.pk %}">Update</a></p>
+    <p><a class='btn btn-danger mr-5' href="{% url 'psql_db:delete' pk=school_detail.pk %}">Delete</a></p>
+  </div>
+
+
+  <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+
+  <h3>Students:</h3>
+  <p></p>
+  {% for student in school_detail.students.all %}
+    <p>Student Name: {{student.name}}</p>
+    <p>Student Age: {{student.age}}</p>
+    <p>School Name: {{school_detail.name}}</p>
+    <p>School Location: {{school_detail.location}}</p>
+    <!-- <div class="btn-group" role="group" aria-label="Basic example">
+      <p><a class='btn btn-warning mr-5' href="{% url 'psql_db:update' pk=school_detail.pk %}">Update</a></p>
+      <p><a class='btn btn-danger mr-5' href="{% url 'psql_db:delete' pk=school_detail.pk %}">Remove School Relation</a></p>
+    </div> -->
+    <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}

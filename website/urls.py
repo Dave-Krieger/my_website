@@ -23,5 +23,6 @@ urlpatterns = [
     path('main_page/',include('main_page.urls')),
     path('education/',include('education.urls')),
     path('about_me/',include('about_me.urls')),
+    path('psql_db/',include('psql_db.urls')),
 
 ]

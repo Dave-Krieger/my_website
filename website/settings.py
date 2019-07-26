@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'data_viz',
     'education',
     'about_me',
+    'psql_db',
 ]
 
 MIDDLEWARE = [
@@ -86,10 +87,10 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'my_database',
-        'USER': 'david',
-        'PASSWORD': 'password1!',
+        'USER': 'test2',
+        'PASSWORD': 'loading',
         'HOST': 'localhost',
         'PORT': '5432',
     }
