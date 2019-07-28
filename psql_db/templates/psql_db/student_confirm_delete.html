@@ -4,17 +4,15 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>DELETE SCHOOL: {{school.name}}?</h1>
+    <h1>DELETE STUDENT: {{student.name}}?</h1>
     <form method="post">
       {%csrf_token%}
       <input type="submit" class="btn btn-danger" value="Delete">
-      <a href="{% url 'psql_db:detailSchool' pk=school.pk %}"> Cancel</a>
+      <a href="{% url 'psql_db:listStudent' pk=student.pk %}"> Cancel</a>
     </form>
   </div>
 
 </div>
-<h1>Delete {{school.name}}</h1>
-
-
+<h1>Delete {{student.name}}</h1>
 
 {% endblock %}

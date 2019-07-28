@@ -1,0 +1,67 @@
+{% extends "psql_db/base.html" %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>Web Development Concepts Portfolio</center></h1>
+    <h3><center>A basic program & seires of webpages designed to demonstrate some fundamental web development skills:</center></h3>
+    <p></p>
+    <div class="row">
+      <div class="col-sm-6">
+        <ul>
+          <li>MVC</li>
+          <li>PostgreSQL</li>
+        </ul>
+        </div>
+      <div class="col-sm-6">
+        <ul>
+          <li>CRUD</li>
+          <li>Deployment of DB on remote host</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <p></p>
+    <h5 class="text-center">Table of Contents</h5>
+
+    <div class="list-group">
+
+      <a href="{% url 'psql_db:listSchool' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">School Views</h5>
+        </div>
+        <p class="mb-1">Dropdown menu bar that lets users:</p>
+        <ul>
+          <li>List of Schools: Displays a list of all the current schools in the database</li>
+          <li>Create a School: Allows users to create a new school to add to the database</li>
+        </ul>
+        <small class="text-muted">Portfolio</small>
+      </a>
+
+      <a href="{% url 'psql_db:listStudent' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Student Views</h5>
+        </div>
+        <p class="mb-1">Dropdown menu bar that lets users:</p>
+        <ul>
+          <li>List of Students: Displays a list of all the current student in the database</li>
+          <li>Create a Student: Allows users to create a new student to add to the database</li>
+        </ul>
+        <small class="text-muted">Portfolio</small>
+      </a>
+
+      <a href="{% url 'psql_db:tech_dets' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Technical_Details+Scrumboard</h5>
+        </div>
+        <p class="mb-1">A brief description how the 'MVC w/ PSQL' webpages were developed and provides a psuedo-scrumboard for my plans</p>
+        <small class="text-muted">Misc</small>
+      </a>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+
+{% endblock %}

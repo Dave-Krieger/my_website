@@ -1,0 +1,57 @@
+{% extends "psql_db/base.html" %}
+{% block body_block %}
+
+{% load static %}
+
+<div class="container">
+  <div class="jumbotron">'
+    <h3 class="text-center">Technical_Details</h3>
+    <p style="text-indent: 40px">These series of webpages run on the Django frameworks using <strong><i>class based views</i></strong>. It is designed as its own app, 'psql_db'. This was originally a lesson in writing class bassed views for django from the course: <a href="https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/">here</a>, but I have since expanded upon it. Currently, I hope to add a geo-coordinate web-api so that I can assign students to closest schools.</p>
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+    <h3 class="text-center"> SCRUMBOARD </h3>
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+
+    <h5>Not Started</h5>
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-times"></i>Create webpage dedicated to explaining the program</li>
+      <li><i class="fa-li fa fa-times"></i>Fix alignment of forms: create/update</li>
+    </ul>
+
+    <p></p>
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+    <h5>In Progress</h5>
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-spinner fa-spin"></i>N/A</li>
+    </ul>
+
+
+    <p></p>
+    <hr style="width: 100%; color: black; height: 8px; background-color:black;" />
+    <h5>Future development goals - "Reach"</h5>
+
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-times"></i>Add web-api to this series. Maybe geo-coords</li>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Generate a few schools across US</li>
+        <li><i class="fa-li fa fa-times"></i>Generate many students w/ specific adresses</li>
+        <li><i class="fa-li fa fa-times"></i>Use web api to determine dist from student to school</li>
+        <li><i class="fa-li fa fa-times"></i>Assign students to closest school</li>
+      </ul>
+    </ul>
+
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-times"></i>Create more models... to play around for later </li>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-times"></i>Family</li>
+        <li><i class="fa-li fa fa-times"></i>Food</li>
+        <li><i class="fa-li fa fa-times"></i>Hobbies</li>
+      </ul>
+    </ul>
+
+</div>
+</div>
+
+
+<!-- /Home -->
+
+{% endblock %}
