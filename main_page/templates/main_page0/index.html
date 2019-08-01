@@ -1,0 +1,109 @@
+{% extends "main_page/base.html" %}
+{% block body_block %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'main_page/css/hero_img.css' %}">
+
+<!--================Home Banner Area =================-->
+<section class="profile_area">
+    <div class="container">
+      <div class="profile_inner p_120">
+  <div class="row">
+    <div class="col-lg-5">
+      <img class="img-fluid" src="{% static 'main_page/img/1.jpg' %} " alt="">
+    </div>
+    <div class="col-lg-7">
+      <div class="personal_text">
+        <h6>Hello Everybody, i am</h6>
+        <h3>David Krieger</h3>
+        <h4>Aspiring Software Developer & IT</h4>
+        <p>Hi! I'm a computer science and cognitive science graduate from the University of California, Santa Cruz. I built this website as a platform to improve my programming skills as well as provide additional information to potential employers.</p>
+
+        <h5>Basic Contact Info</h5>
+        <ul class="list basic_info">
+          <li><a ><i class="fa fa-phone"></i>949-309-7954</a></li>
+          <li><a ><i class="fa fa-envelope"></i>davidkrieger95@gmail.com</a></li>
+          <li><a ><i class="fa fa-home"></i>Santa Cruz, CA</a></li>
+        </ul>
+        <ul class="list personal_social">
+          <li><a href="https://github.com/Dave-Krieger/" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/dave-krieger/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================End Home Banner Area =================-->
+
+<div class="container">
+  <div class="jumbotron">'
+    <h1><center>Welcome to my main home page!</center></h1>
+    <h3><center>Each webpage tab expands to a a new seires of availible webpages. Below is a table of contents about what each sub-series of webpages entails</center></h3>
+    <p></p>
+    <h5 class="text-center">Table of Contents</h5>
+
+    <div class="list-group">
+
+      <a href="{% url 'about_me:about_me_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">About Me</h5>
+        </div>
+        <p class="mb-1">Learn who I am as well as some various skills</p>
+        <ul>
+          <li>Hobbies</li>
+          <li>Programming Habits & Preferences</li>
+          <li>Leadership</li>
+        </ul>
+        <small class="text-muted">Personal</small>
+      </a>
+
+      <a href="{% url 'education:education_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Education</h5>
+        </div>
+        <p class="mb-1">Learn about my education at UCSC as well as the experiences I had within each major.</p>
+        <ul>
+          <li>Computer Science</li>
+          <li>Cognitive Science</li>
+          <li>Class History</li>
+        </ul>
+        <small class="text-muted">Education</small>
+      </a>
+
+      <a href="{% url 'data_viz:data_viz_index' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Portfolio - Data Visualization</h5>
+        </div>
+        <p class="mb-1">Showcases climate change data visualizations I created for my senior design project at UCSC. It features:</p>
+        <ul>
+          <li>Interactive data visualizations</li>
+          <li>Videos where I discuss the stories told by visualizations</li>
+          <li>Step-by-step explanation of one of the data wrangling scripts I wrote</li>
+        </ul>
+        <small>Portfolio, Communication Skills</small>
+      </a>
+
+      <a href="https://github.com/Dave-Krieger/Krieger-Dave-Portfolio" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Github Portfolio</h5>
+        </div>
+        <p class="mb-1">Features three different portfolio items on my github</p>
+        <ul>
+          <li>Compiler Design in c++</li>
+          <li>Low level C:  HTTP-FTP server w/ client signup, passwords, and network security.</li>
+          <li>Micro-controller: Loop it in xilinx</li>
+          <li>Data Visualization (also availible on this website!)</li>
+        </ul>
+        <small>Portfolio</small>
+      </a>
+
+    </div>
+    <p></p>
+
+    <p>I built this website using Django and the standard HTML/CSS/JS/Bootstrap. Some of the other webpages may use other languages which are discussed on the technical_details webapages.</p>
+  </div>
+</div>
+
+<!-- /Home -->
+
+{% endblock %}

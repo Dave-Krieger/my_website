@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dave-Krieger</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom stlylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
+
+  </head>
+  <body>
+
+
+      <!-- Navbar content -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'main_page:index' %}">Main_Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link text-white" href="{% url 'about_me:about_me_index' %}">About me</a>
+              <a class="nav-item nav-link text-white" href="{% url 'education:education_index' %}">Education</a>
+              <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization</a>
+              <a class="nav-item nav-link text-white" href="{% url 'psql_db:psql_index' %}">MVC basics w/ PSQL</a>
+              <a class="nav-item nav-link text-white" href="https://github.com/Dave-Krieger/Krieger-Dave-Portfolio" target="_blank">Github Portfolio</a>
+
+
+          </div>
+        </div>
+      </nav>
+    <div class="">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

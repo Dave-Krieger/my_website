@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="{% static 'meetme/img/favicon.png' %}" type="image/png">
+        <title>Dave Krieger</title>
 
-    <title>Dave-Krieger</title>
-
+        <link rel="stylesheet" href="{% static 'meetme/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/popup/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/vendors/flaticon/flaticon.css' %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'meetme/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'meetme/css/responsive.css' %}">
+    </head>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Custom stlylesheet -->
-    <link rel="stylesheet" type="text/css" href="{% static "main_page/css/style.css" %}"/>
-
-  </head>
   <body>
 
 
-      <!-- Navbar content -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'main_page:index' %}">Main_Page</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link text-white" href="{% url 'about_me:about_me_index' %}">About me</a>
-              <a class="nav-item nav-link text-white" href="{% url 'education:education_index' %}">Education</a>
-              <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization</a>
-              <a class="nav-item nav-link text-white" href="{% url 'psql_db:psql_index' %}">MVC basics w/ PSQL</a>
-              <a class="nav-item nav-link text-white" href="https://github.com/Dave-Krieger/Krieger-Dave-Portfolio" target="_blank">Github Portfolio</a>
-
-
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Fixed navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="{% url 'about_me:about_me_index' %}">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link text-white" href="{% url 'psql_db:psql_index' %}">MVC basics w/ PSQL</a>
+              </li>
+            </ul>
+            <!-- <form class="form-inline mt-2 mt-md-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
           </div>
-        </div>
-      </nav>
+        </nav>
+      <!--================Header Menu Area =================-->
+
+
     <div class="">
       {% block body_block %}
       {% endblock %}
     </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'meetme/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'meetme/js/popper.js' %}"></script>
+    <script src="{% static 'meetme/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'meetme/js/stellar.js' %}"></script>
+    <script src="{% static 'meetme/vendors/lightbox/simpleLightbox.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'meetme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'meetme/vendors/counter-up/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'meetme/js/mail-script.js' %}"></script>
+    <script src="{% static 'meetme/js/theme.js' %}"></script>
 
   </body>
 </html>
