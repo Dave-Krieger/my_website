@@ -24,25 +24,24 @@
     </head>
     <!-- Bootstrap -->
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" href="#">Fixed navbar</a>
+          <a class="navbar-brand" href="{% url 'main_page:index' %}">Home</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-white" href="{% url 'about_me:about_me_index' %}">About me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-item nav-link text-white" href="{% url 'data_viz:data_viz_index' %}">Data Visualization</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-item nav-link text-white" href="{% url 'psql_db:psql_index' %}">MVC basics w/ PSQL</a>
-              </li>
+              <!-- <li class="nav-item"><a class="nav-link text-white" href="{% url 'about_me:about_me_index' %}">About me</a></li> -->
+              <li class="nav-item"><a class="nav-link text-white" href="#about_me">About me</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#experience">Experience </a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li>
+
+              <!-- <li class="nav-item"><a class="nav-link text-white" href="{% url 'psql_db:psql_index' %}">Blog</a></li> -->
+              <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+
             </ul>
             <!-- <form class="form-inline mt-2 mt-md-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -58,8 +57,27 @@
       {% endblock %}
     </div>
 
+    <!--================Footer Area =================-->
+    <footer class="footer_area p_40">
+      <div class="container">
+        <div class="row footer_inner">
+            <aside class="f_widget ab_widget">
+              <div class="f_title">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </aside>
+          </div>
+
+      </div>
+    </footer>
+    <!--================End Footer Area =================-->
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </script>
     <script src="{% static 'meetme/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'meetme/js/popper.js' %}"></script>
     <script src="{% static 'meetme/js/bootstrap.min.js' %}"></script>
