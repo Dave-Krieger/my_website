@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'education',
     'about_me',
     'psql_db',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
@@ -129,6 +130,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+LOGIN_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -146,7 +149,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
   os.path.join(SITE_ROOT ,'static/'),
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storapostcontentge.CompressedStaticFilesStorage'
 """
 
 db_from_env = dj_database_url.config(conn_max_age=500)
